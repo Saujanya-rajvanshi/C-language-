@@ -57,3 +57,6 @@ printf("%d\n",-c%b);
 -1
 
 
+//operator 
+
+
