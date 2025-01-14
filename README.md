@@ -29,5 +29,12 @@ void main()
     printf("%d+%d=%d\n",a,b,di);
 }
 \\output
+enter number a and b
+200
+25
+200+25=225
+200-25-175
+200*25=5000
+200/25=8
 
 
