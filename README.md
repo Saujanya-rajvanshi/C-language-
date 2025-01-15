@@ -179,7 +179,6 @@ Unary Operators:
 
 ```
 
-Your code is correct and will work as expected to determine whether the entered age corresponds to a "child," "teenager," or "adult." Here's the same code with improved formatting for readability:
 
 ```c
 #include <stdio.h>
@@ -245,13 +244,7 @@ adult
 
 
 
-Your code contains several issues that need correction for it to work properly:
 
-1. **`luckyNumber 7`**: The `=` operator is missing in the declaration of `luckyNumber`.
-2. **Syntax in `number luckyNumber?`**: This statement is missing an operator for comparison (e.g., `==` for equality check).
-3. **Line breaks**: There's an incomplete statement `printf("you are not` and missing a closing quotation mark.
-
-Here's the corrected code:
 
 ```c
 #include <stdio.h>
@@ -276,10 +269,7 @@ int main()
 }
 ```
 
-### Explanation of Changes:
-1. **Declaration of `luckyNumber`**: Corrected it to `int luckyNumber = 7;`.
-2. **Comparison in Ternary Operator**: Changed `number luckyNumber?` to `number == luckyNumber?`.
-3. **Fixed Line Breaks**: Completed the `printf("you are not lucky \n")` statement.
+
 
 ### Example Input/Output:
 
@@ -301,6 +291,75 @@ Enter age: 15
 ```
 not adult 
 you are lucky
+```
+
+
+Here’s the code:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char day;
+
+    // Prompt the user to enter a character
+    printf("Enter the first letter of a day (e.g., m for Monday, T for Thursday): ");
+    scanf(" %c", &day); // Note the space before %c to handle newline characters
+
+    // Switch statement for day
+    switch (day)
+    {
+    case 'm':
+        printf("Monday\n");
+        break;
+    case 't':
+        printf("Tuesday\n");
+        break;
+    case 'w':
+        printf("Wednesday\n");
+        break;
+    case 'T':
+        printf("Thursday\n");
+        break;
+    case 'f':
+        printf("Friday\n");
+        break;
+    case 's':
+        printf("Saturday\n");
+        break;
+    case 'S':
+        printf("Sunday\n");
+        break;
+    default:
+        printf("Invalid input. Please enter a valid day character.\n");
+        break;
+    }
+
+    return 0;
+}
+```
+
+
+
+### Example Input/Output:
+
+#### Input 1:
+```
+Enter the first letter of a day (e.g., m for Monday, T for Thursday): m
+```
+**Output:**
+```
+Monday
+```
+
+#### Input 2:
+```
+Enter the first letter of a day (e.g., m for Monday, T for Thursday): z
+```
+**Output:**
+```
+Invalid input. Please enter a valid day character.
 ```
 
     
