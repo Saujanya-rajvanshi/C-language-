@@ -481,4 +481,50 @@ Enter n: -3
 Factorial of a negative number is undefined.
 ``` 
 
+Here is an example of a simple **call by value** program in C:
+
+### Code:
+```c
+#include <stdio.h>
+
+// Function to demonstrate call by value
+void modifyValue(int num) {
+    printf("Inside function (before modification): num = %d\n", num);
+    num = 20; // Modify the value of the parameter
+    printf("Inside function (after modification): num = %d\n", num);
+}
+
+int main() {
+    int num = 10;
+
+    printf("Before function call: num = %d\n", num);
+
+    // Call the function
+    modifyValue(num);
+
+    printf("After function call: num = %d\n", num);
+
+    return 0;
+}
+```
+
+### Explanation:
+1. **Call by Value**:
+   - In call by value, the value of the variable is passed to the function.
+   - The function creates a copy of the variable in its own memory space.
+   - Any changes made to the variable inside the function do not affect the original variable.
+
+2. **How It Works**:
+   - In the `main()` function, the value of `num` is 10.
+   - When the `modifyValue()` function is called, a copy of `num` is passed to the function.
+   - Modifications inside `modifyValue()` do not affect the original `num` in `main()`.
+
+### Output:
+```
+Before function call: num = 10
+Inside function (before modification): num = 10
+Inside function (after modification): num = 20
+After function call: num = 10
+```
+
 
