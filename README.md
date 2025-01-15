@@ -245,6 +245,15 @@ adult
 
 
 
+Your code contains several issues that need correction for it to work properly:
+
+1. **`luckyNumber 7`**: The `=` operator is missing in the declaration of `luckyNumber`.
+2. **Syntax in `number luckyNumber?`**: This statement is missing an operator for comparison (e.g., `==` for equality check).
+3. **Line breaks**: There's an incomplete statement `printf("you are not` and missing a closing quotation mark.
+
+Here's the corrected code:
+
+```c
 #include <stdio.h>
 
 int main() 
@@ -265,4 +274,33 @@ int main()
 
     return 0;
 }
+```
 
+### Explanation of Changes:
+1. **Declaration of `luckyNumber`**: Corrected it to `int luckyNumber = 7;`.
+2. **Comparison in Ternary Operator**: Changed `number luckyNumber?` to `number == luckyNumber?`.
+3. **Fixed Line Breaks**: Completed the `printf("you are not lucky \n")` statement.
+
+### Example Input/Output:
+
+#### Input 1:
+```
+Enter age: 20
+```
+**Output:**
+```
+adult 
+you are lucky
+```
+
+#### Input 2:
+```
+Enter age: 15
+```
+**Output:**
+```
+not adult 
+you are lucky
+```
+
+    
