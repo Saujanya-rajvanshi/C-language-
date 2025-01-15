@@ -245,8 +245,8 @@ adult
 
 
 //ternary operator 
-#include <stdio.h>
 
+#include <stdio.h>
 int main() 
 {
     int age;
