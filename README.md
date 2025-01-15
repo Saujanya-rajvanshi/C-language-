@@ -362,4 +362,64 @@ Enter the first letter of a day (e.g., m for Monday, T for Thursday): z
 Invalid input. Please enter a valid day character.
 ```
 
-    
+
+###  Code:
+```c
+#include <stdio.h>
+
+int main() 
+{
+    // For loop
+    printf("Using for loop:\n");
+    for (int i = 1; i <= 100; i++) 
+    {
+        printf("%d\n", i);
+    }
+
+    // While loop
+    printf("\nUsing while loop:\n");
+    int i = 1; // Initialize
+    while (i <= 100) 
+    {
+        printf("%d\n", i);
+        i++; // Increment
+    }
+
+    // Do-while loop
+    printf("\nUsing do-while loop:\n");
+    i = 1; // Re-initialize
+    do 
+    {
+        printf("%d\n", i);
+        i++; // Increment
+    } while (i <= 100);
+
+    return 0;
+}
+```
+
+
+
+### Example Output:
+```
+Using for loop:
+1
+2
+3
+...
+100
+
+Using while loop:
+1
+2
+3
+...
+100
+
+Using do-while loop:
+1
+2
+3
+...
+100
+```
