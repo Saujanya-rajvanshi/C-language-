@@ -241,3 +241,28 @@ Enter age: 20
 ```
 adult
 ```
+
+
+
+//ternary operator 
+#include <stdio.h>
+
+int main() 
+{
+    int age;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    // Ternary operator to check if age is greater than 18
+    age > 18 ? printf("adult \n") : printf("not adult \n");
+
+    int number = 7;
+    int luckyNumber = 7;
+
+    // Ternary operator to check if number equals luckyNumber
+    number == luckyNumber ? printf("you are lucky \n") : printf("you are not lucky \n");
+
+    return 0;
+}
+
