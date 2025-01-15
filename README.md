@@ -423,3 +423,62 @@ Using do-while loop:
 ...
 100
 ```
+
+
+### Corrected Code:
+```c
+#include <stdio.h>
+
+// Function to print factorial of n
+int factorial(int n);
+
+int main() {
+    int n;
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    // Handle negative inputs
+    if (n < 0) {
+        printf("Factorial of a negative number is undefined.\n");
+    } else {
+        printf("Factorial is: %d\n", factorial(n));
+    }
+
+    return 0;
+}
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1; // Base case: factorial of 0 is 1
+    }
+
+    int factnm1 = factorial(n - 1); // Recursive call
+    int factn = factnm1 * n;       // Multiply n with factorial of (n-1)
+    return factn;
+}
+```
+
+
+
+### Example Input/Output:
+
+#### Input:
+```
+Enter n: 5
+```
+#### Output:
+```
+Factorial is: 120
+```
+
+#### Input:
+```
+Enter n: -3
+```
+#### Output:
+```
+Factorial of a negative number is undefined.
+``` 
+
+
