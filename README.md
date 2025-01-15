@@ -175,4 +175,69 @@ a >> 1: 5
 Unary Operators:
 ++a: 11
 --b: 2
+
+
+```
+
+Your code is correct and will work as expected to determine whether the entered age corresponds to a "child," "teenager," or "adult." Here's the same code with improved formatting for readability:
+
+```c
+#include <stdio.h>
+
+int main() 
+{
+    int age;
+
+    // Prompt the user to enter age
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    // Check the age category
+    if (age < 12) 
+    {
+        printf("child\n");
+    } 
+    else if (age < 18) 
+    {
+        printf("teenager\n");
+    } 
+    else 
+    {
+        printf("adult\n");
+    }
+
+    return 0;
+}
+```
+
+### Example Input/Output:
+
+#### Example 1:
+**Input:**
+```
+Enter age: 10
+```
+**Output:**
+```
+child
+```
+
+#### Example 2:
+**Input:**
+```
+Enter age: 15
+```
+**Output:**
+```
+teenager
+```
+
+#### Example 3:
+**Input:**
+```
+Enter age: 20
+```
+**Output:**
+```
+adult
 ```
