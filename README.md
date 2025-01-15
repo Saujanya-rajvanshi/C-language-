@@ -244,7 +244,7 @@ adult
 
 
 
-//ternary operator 
+
 
 #include <stdio.h>
 int main() 
