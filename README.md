@@ -245,7 +245,7 @@ adult
 
 
 
-
+### ternary operator 
 ```c
 #include <stdio.h>
 
