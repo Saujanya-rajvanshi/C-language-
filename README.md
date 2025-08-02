@@ -283,16 +283,6 @@ adult
 you are lucky
 ```
 
-#### Input 2:
-```
-Enter age: 15
-```
-**Output:**
-```
-not adult 
-you are lucky
-```
-
 
 Here’s the code:
 
