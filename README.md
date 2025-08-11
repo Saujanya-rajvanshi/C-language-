@@ -564,3 +564,15 @@ After function call: num = 20
 
 ### Key Point:
 - The value of `num` in the `main()` function is changed after the function call, demonstrating **call by reference**.
+
+
+### checking character 
+
+```
+char = input("Enter a character: ")
+
+if char.isdigit():
+    print("It is a number.")
+else:
+    print("It is not a number.")
+```
