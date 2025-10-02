@@ -55,7 +55,7 @@ printf("%d\n",-c%b);<br>
 //output<br>
 1<br>
 -1<br>
-
+--- 
 
 //operator
 
