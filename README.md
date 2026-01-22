@@ -1,4 +1,293 @@
 # C-language-
+
+### Index - C Programming
+
+* [History of C](#history-of-c)
+* [Features of C](#features-of-c)
+* [Basics](#basics)
+* [Header Files](#header-files)
+* [Data Handling](#data-handling)
+* [Flow of Control](#flow-of-control)
+* [Functions](#functions)
+* [Arrays](https://github.com/Saujanya-rajvanshi/Arrays-)
+* [Pointers](#pointers)
+* [Dynamic Memory Allocation](#dynamic-memory-allocation)
+* [Structures & Unions](#structures-unions)
+* [File Handling](#file-handling)
+* [Preprocessor & Macros](#preprocessor-macros)
+* [String Handling](#string-handling)
+* [Standard Libraries](#standard-libraries)
+* [Advanced Concepts](#advanced-concepts)
+* [Competitive Programming / DSA Readiness](#competitive-programming)
+* [Basic Maths Codes](https://github.com/Saujanya-rajvanshi/basic-maths)
+
+---
+
+## History of C
+
+* Developed in **1972** by **Dennis Ritchie** at **Bell Labs**.
+* Derived from **B language**, mainly for **UNIX OS development**.
+* Foundation for **C++, Java, Python, C#**.
+
+---
+
+## **2. Features of C** <a name="features-of-c"></a>
+
+* **Simple**: Easy to learn and use.
+* **Structured**: Uses functions for modular programming.
+* **Portable**: Programs can run on different systems.
+* **Fast**: Compiled language; high performance.
+* **Rich library**: Standard library for I/O, string, math, etc.
+* **Low-level access**: Can manipulate memory using pointers.
+
+---
+
+## **3. Basics** <a name="basics"></a>
+
+* **Structure of C Program**:
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+* **Data types**: `int`, `float`, `double`, `char`, `void`
+* **Variables**: Named memory locations to store data
+* **Constants**: `#define PI 3.14` or `const int a = 10;`
+* **Operators**: Arithmetic (`+ - * / %`), Relational (`> < == !=`), Logical (`&& || !`), Assignment (`=`)
+
+---
+
+## **4. Header Files** <a name="header-files"></a>
+
+* **Purpose**: Contains **function declarations** and macros.
+* **Common headers**:
+
+  * `stdio.h` → Input/output (`printf`, `scanf`)
+  * `stdlib.h` → Memory allocation, process control (`malloc`, `exit`)
+  * `string.h` → String manipulation (`strcpy`, `strlen`)
+  * `math.h` → Math functions (`sqrt`, `pow`)
+* Include using: `#include <header.h>`
+
+---
+
+## **5. Data Handling** <a name="data-handling"></a>
+
+* **Input/Output**:
+
+```c
+printf("Enter number: ");
+scanf("%d", &num);
+```
+
+* **Type Casting**:
+
+```c
+int a = 10;
+float b = (float)a; // convert int to float
+```
+
+* **Constants**: `const` or `#define`
+* **Enumerations**:
+
+```c
+enum Day {Mon, Tue, Wed};
+enum Day today = Mon;
+```
+
+---
+
+## **6. Flow of Control** <a name="flow-of-control"></a>
+
+* **Decision Making**:
+
+```c
+if (condition) { }
+else if (condition) { }
+else { }
+switch (var) { case 1: break; default: break; }
+```
+
+* **Loops**:
+
+  * `for (init; condition; increment) { }`
+  * `while (condition) { }`
+  * `do { } while (condition);`
+* **Jump Statements**: `break`, `continue`, `goto`, `return`
+
+---
+
+## **7. Functions** <a name="functions"></a>
+
+* **Definition**:
+
+```c
+return_type function_name(parameters) {
+    // code
+    return value;
+}
+```
+
+* **Types**:
+
+  * No return, no parameters
+  * Return value, no parameters
+  * No return, with parameters
+  * Return value, with parameters
+* **Example**:
+
+```c
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+---
+
+## **8. Arrays**
+
+[Go to Arrays Notes](https://github.com/Saujanya-rajvanshi/Arrays-)
+
+* **One-dimensional**: `int arr[5];`
+* **Two-dimensional**: `int arr[3][3];`
+* Access: `arr[i]` or `arr[i][j]`
+* Initialization: `int arr[5] = {1,2,3,4,5};`
+
+---
+
+## **9. Pointers** <a name="pointers"></a>
+
+* **Pointer**: Variable storing **address** of another variable.
+
+```c
+int x = 10;
+int *ptr = &x;
+printf("%d", *ptr); // prints 10
+```
+
+* **Pointer operations**: `*`, `&`, pointer arithmetic.
+* **Applications**: Dynamic memory, arrays, functions (pass by reference).
+
+---
+
+## **10. Dynamic Memory Allocation** <a name="dynamic-memory-allocation"></a>
+
+* Functions: `malloc()`, `calloc()`, `realloc()`, `free()`
+
+```c
+int *ptr = (int*)malloc(5 * sizeof(int)); // allocate 5 ints
+free(ptr); // free memory
+```
+
+---
+
+## **11. Structures & Unions** <a name="structures-unions"></a>
+
+* **Structure**: Group different data types.
+
+```c
+struct Student {
+    char name[20];
+    int age;
+};
+struct Student s1;
+```
+
+* **Union**: Stores **one member at a time**, saves memory.
+
+```c
+union Data {
+    int i;
+    float f;
+    char str[20];
+};
+```
+
+---
+
+## **12. File Handling** <a name="file-handling"></a>
+
+* **File operations**: Open, read, write, close.
+
+```c
+FILE *fp;
+fp = fopen("file.txt","w"); // write mode
+fprintf(fp, "Hello");
+fclose(fp);
+```
+
+* Modes: `r` (read), `w` (write), `a` (append), `r+` (read/write)
+
+---
+
+## **13. Preprocessor & Macros** <a name="preprocessor-macros"></a>
+
+* **Macro**: Constant or function-like replacement.
+
+```c
+#define PI 3.14
+#define SQUARE(x) ((x)*(x))
+```
+
+* **Conditional compilation**: `#ifdef`, `#ifndef`, `#endif`
+
+---
+
+## **14. String Handling** <a name="string-handling"></a>
+
+* **String**: Array of characters ending with `\0`
+* **Common functions**: `strlen()`, `strcpy()`, `strcat()`, `strcmp()`
+
+---
+
+## **15. Standard Libraries** <a name="standard-libraries"></a>
+
+* `stdio.h` → I/O
+* `stdlib.h` → Memory & process
+* `string.h` → String functions
+* `math.h` → Math operations
+* `ctype.h` → Character functions (`isdigit`, `isalpha`)
+
+---
+
+## **16. Advanced Concepts** <a name="advanced-concepts"></a>
+
+* **Recursion**: Function calling itself.
+* **Bitwise operations**: `& | ^ ~ << >>`
+* **Command-line arguments**: `int main(int argc, char *argv[])`
+* **Typedef**: Create new type names
+
+```c
+typedef unsigned int uint;
+```
+
+---
+
+## **17. Competitive Programming / DSA Readiness** <a name="competitive-programming"></a>
+
+* Focus on: Arrays, Strings, Pointers, Recursion, Sorting, Searching
+* Practice **Time & Space Optimization**
+* Use **standard templates** for faster coding
+
+---
+
+## **18. Basic Maths Codes**
+
+[Go to Basic Maths Codes](https://github.com/Saujanya-rajvanshi/basic-maths)
+
+* Includes: Factorials, GCD/LCM, Prime checking, Fibonacci, Power, Modular arithmetic
+
+---
+
+If you want, I can **also make this into a fully clickable Markdown with small code snippets inside the index**, exactly like your C++ notes style. It will be ready to use in GitHub or your PDF notes.
+
+Do you want me to do that next?
+
+
 C language starting 
 //first code <br>
 #include<stdio.h><br>
