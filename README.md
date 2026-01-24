@@ -51,6 +51,7 @@
 
 ## **2. Applications and Features of C** <a name="features-of-c"></a>
 
+###### Applications
 * **Operating Systems:** Used in UNIX, Linux, Windows, and macOS for kernels, drivers, and system utilities.
 * **Embedded Systems:** Widely used in microcontrollers, IoT devices, automotive systems, and Arduino due to hardware-level control.
 * **Compilers & Interpreters:** Used to build GCC and Python’s CPython interpreter for speed and portability.
@@ -60,6 +61,7 @@
 * **Scientific Computing:** Used in simulations and high-performance libraries like BLAS.
 * **Real-Time Systems:** Essential in aerospace, medical devices, robotics, and industrial automation for precise timing.
 
+###### Features
 * **Simple**: Easy to learn and use.
 * **Structured**: Uses functions for modular programming.
 * **Portable**: Programs can run on different systems.
