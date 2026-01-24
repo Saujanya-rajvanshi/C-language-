@@ -73,7 +73,7 @@
 
 ###### basics
 ## 🎗 BASICS 
-* character set -> same as c++
+- [character set](#character-set)
 - [tokens](#Tokens)
 - [Barebones of c++ Program](#barebones-of-cpp-program)
 - [Data Types (overview)](#Data-Types-overview)
@@ -87,6 +87,13 @@
 - [next line](#next-line)
 - [Escape Sequences](#Escape-Sequences)
 - [output & input](#output-and-input)
+
+## character set
+✅ **NO difference**
+* **Letters:** A–Z, a–z
+* **Digits :** 0–9
+* **Special symbols:** `+  -  *  /  %  =  <  >  !  &  |  ^  ~  ?  :  ;  ,  .  '  "  #  $  @  _  ( )  { }  [ ]
+* **Whitespace characters:** space, tab (`\t`), newline (`\n`), carriage return (`\r`)
 
 ## Tokens
  Tokens are the **smallest units** of a C++ program.
