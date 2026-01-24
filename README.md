@@ -132,47 +132,42 @@
 * **C ≈ 32 keywords**
 * **C++ ≈ 95 keywords (C++20)**
 
-## 💎 IDENTIFIER
+### 💎 IDENTIFIER
 
 ✅ **NO difference**
 Rules are **exactly same** in C and C++.
 
-## 💎 LITERALS
+### 💎 LITERALS
 
-### ❌ C++ only
-
+❌ C++ only
 * Boolean literals → `true`, `false`
 * Null pointer literal → `nullptr`
 
-### ✅ C
-
+✅ C
 * Uses `0` or `NULL` instead of `nullptr`
 * Boolean handled using `int` (0 or 1)
 
-* **INTEGER LITERALS**
+##### **INTEGER LITERALS**
 ❌ C++ only
 * **Binary literals** → `0b1010`
 ✅ C
 * Decimal, Octal, Hexadecimal only
 
-* **FLOATING-POINT**
+##### **FLOATING-POINT**
 ✅ **NO difference**
 * float, double, long double
 * IEEE-754 format
 * Precision rules same
 
-* **CHARACTER LITERALS**
-
+##### **CHARACTER LITERALS**
 ✅ **NO difference**
 * char type
 * ASCII values
 * Escape sequences same
 
----
+### 💎 STRING
 
-## 💎 STRING
-
-### ❌ C++ only
+❌ C++ only
 
 * `string` (STL)
 * `<string>` header
