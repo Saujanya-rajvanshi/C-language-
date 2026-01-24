@@ -45,8 +45,6 @@
 | **C23**              | 2023        | Latest standard; introduced features like `nullptr`, binary literals, and improved support for modern hardware architectures.                             |
 
 
-
-
 ---
 
 ## **2. Applications and Features of C** <a name="features-of-c"></a>
@@ -168,13 +166,11 @@ Rules are **exactly same** in C and C++.
 ### 💎 STRING
 
 ❌ C++ only
-
 * `string` (STL)
 * `<string>` header
 * Functions like `length()`, `append()`
 
-### ✅ C
-
+✅ C
 * Strings are **character arrays**
 
 ```c
@@ -183,83 +179,54 @@ char str[20] = "Hello";
 
 * Uses `<string.h>` functions: `strlen`, `strcpy`
 
----
 
-## 💎 BOOLEAN
+### 💎 BOOLEAN
 
-### ❌ C++ only
-
+❌ C++ only
 * `bool` type
 * `true` / `false`
 
-### ✅ C
-
+✅ C
 * Uses `int`
 
 ```c
 int flag = 1; // true
 ```
 
----
+### 💎 NULL POINTER
 
-## 💎 NULL POINTER
-
-### ❌ C++ only
-
+❌ C++ only
 * `nullptr`
 
-### ✅ C
-
+✅ C
 * Uses `NULL` or `0`
 
 ```c
 int *p = NULL;
 ```
 
----
-
-## 💎 OPERATORS
-
-### ❌ C++ only
-
+### 💎 OPERATORS
+❌ C++ only
 * `::` scope resolution
 * `->` with classes
 * Operator overloading
 
-### ✅ C
-
+✅ C
 * No scope resolution
 * No operator overloading
 * Basic arithmetic, logical, bitwise same
 
----
-
-## 💎 PUNCTUATORS
-
-### ❌ C++ only
-
+### 💎 PUNCTUATORS
+❌ C++ only
 * `::`
 * `...` (limited use in C via stdarg)
 
-### ✅ C
-
+✅ C
 * `; { } ( ) [ ] #`
 
----
 
-## 📌 FINAL ONE-LINE SUMMARY (VERY IMPORTANT)
 
-* **Character set → SAME**
-* **Tokens → SAME concept**
-* **Identifiers → SAME**
-* **Keywords → DIFFERENT**
-* **string, bool, nullptr, OOP, templates → C++ ONLY**
-* **C is procedural, C++ is procedural + OOP**
 
-If you want, I can now:
-
-* Convert this into **pure C notes**
-* Or make a **C vs C++ comparison table (exam ready)**
 
 
 * **Structure of C Program**:
