@@ -73,7 +73,7 @@
 ## 🎗 BASICS 
 - [character set](#character-set)
 - [tokens](#Tokens)
-- [Barebones of c++ Program](#barebones-of-cpp-program)
+- [Barebones of C Program](#barebones-of-C-program)
 - [Data Types (overview)](#Data-Types-overview)
 - [Variables & Constants](#Variables-Constants)
 - [Type Modifiers](#Type-Modifiers)
@@ -223,6 +223,128 @@ int *p = NULL;
 
 ✅ C
 * `; { } ( ) [ ] #`
+
+
+## Barebones of C program
+✅ **NO difference**
+
+### 🔹 Program Structure
+
+* Execution starts from **`main()`**.
+* **Statements** end with `;`.
+
+### 🔹 Expressions
+
+* **Produce a value**.
+* Examples: `a + b`, `x > 5`.
+
+### 🔹 Statements
+
+* **Perform actions**.
+* Examples:
+
+  * Declaration: `int x;`
+  * Assignment: `x = 5;`
+  * Conditional: `if (x > 0) {...}`
+  * Output: `cout << x;`
+
+### 🔹 Comments
+
+* **Single-line:** `// comment`
+* **Multi-line:**
+
+```c
+/* comment 
+   continues here */
+```
+
+### 🔹 Blocks
+
+* Defined using `{ }`.
+* **Same braces → same scope** (variables inside are local).
+
+---
+
+## Data Types overview
+✅ **NO difference**
+
+## Variables Constants
+
+### Variables
+
+* **True:** A variable stores data whose value can change, while a constant stores fixed data.
+
+* **Declaration vs Definition:**
+
+  * **Declaration:** Tells the compiler about the variable’s type and name.
+
+    ```c
+    extern int x; // declaration only
+    ```
+  * **Definition:** Allocates memory for the variable.
+
+    ```c
+    int x; // definition
+    ```
+
+* **Initialization vs Assignment:**
+
+  * **Initialization:** Giving a value when defining:
+
+    ```c
+    int x = 10; // initialization
+    ```
+  * **Assignment:** Giving/changing a value later:
+
+    ```c
+    x = 20; // assignment
+    ```
+
+* **Scope:**
+
+  * **Local:** Inside a function/block.
+  * **Global:** Outside all functions.
+  * **Block:** Same as local in a block `{ }`.
+  * **Namespace:** ❌ Not in C (namespace is C++ feature).
+
+* **Lifetime & Storage Duration:**
+
+  * **Automatic:** Local variables, disappear after function ends.
+  * **Static:** Retains value between function calls.
+  * **Dynamic:** Allocated via `malloc()`.
+  * **Register:** Suggests storing in CPU register (rarely used).
+
+* **Linkage:**
+
+  * **Internal (`static`)**: Visible only in the file.
+  * **External (`extern`)**: Shared across files.
+
+### Constants
+
+* **`const`** → Read-only after initialization. ✅ Supported in C.
+* **`constexpr`** → ❌ **C++ only**, not in C.
+* **`volatile`** → Value may change unexpectedly, often used with hardware registers. ✅ Supported in C.
+* **`mutable`** → ❌ **C++ only**, not in C.
+
+So in **C**, everything is correct **except `namespace`, `constexpr`, and `mutable`** — they are **C++ features**.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
