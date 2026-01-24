@@ -71,7 +71,194 @@
 
 ---
 
-## **3. Basics** <a name="basics"></a>
+###### basics
+## 🎗 BASICS 
+* character set -> same as c++
+- [tokens](#Tokens)
+- [Barebones of c++ Program](#barebones-of-cpp-program)
+- [Data Types (overview)](#Data-Types-overview)
+- [Variables & Constants](#Variables-Constants)
+- [Type Modifiers](#Type-Modifiers)
+- [Type Conversion Type Casting](#Type-Conversion-Type-Casting)
+- [sizeof operator](#sizeof-operator)
+- [Comments](#Comments)
+- [data handling](#data-handling-basics)
+- [boiler plate code](#boile-plate-code)
+- [next line](#next-line)
+- [Escape Sequences](#Escape-Sequences)
+- [output & input](#output-and-input)
+
+## Tokens
+ Tokens are the **smallest units** of a C++ program.
+* **Keywords:** -> less than c++
+* **Identifiers:** -> same as c++
+* **Constants (literals):** -> 0 , 1 and null
+* **Operators:** -> same as c++
+*  **Separators (punctuators):** -> same as c++
+
+### 💎 KEYWORDS
+
+### ❌ NOT in C (C++ only)
+* bool
+* wchar_t
+* class, public, private, protected
+* this, new, delete
+* virtual, override, final, friend
+* dynamic_cast, static_cast, reinterpret_cast, const_cast
+* template, typename, namespace, export
+* try, catch, throw, noexcept
+* inline (limited in C), constexpr, decltype
+* operator (overloading)
+* nullptr, true, false
+* asm (C has asm but compiler-dependent)
+
+### ✅ Present in C
+* int, float, double, char, void
+* if, else, for, while, switch
+* break, continue, goto, return
+* auto, register, static, extern
+* const, volatile, typedef, sizeof
+* struct, union, enum
+
+📌 **Keyword count**
+
+* **C ≈ 32 keywords**
+* **C++ ≈ 95 keywords (C++20)**
+
+## 💎 IDENTIFIER
+
+✅ **NO difference**
+Rules are **exactly same** in C and C++.
+
+## 💎 LITERALS
+
+### ❌ C++ only
+
+* Boolean literals → `true`, `false`
+* Null pointer literal → `nullptr`
+
+### ✅ C
+
+* Uses `0` or `NULL` instead of `nullptr`
+* Boolean handled using `int` (0 or 1)
+
+* **INTEGER LITERALS**
+❌ C++ only
+* **Binary literals** → `0b1010`
+✅ C
+* Decimal, Octal, Hexadecimal only
+
+* **FLOATING-POINT**
+✅ **NO difference**
+* float, double, long double
+* IEEE-754 format
+* Precision rules same
+
+* **CHARACTER LITERALS**
+
+✅ **NO difference**
+* char type
+* ASCII values
+* Escape sequences same
+
+---
+
+## 💎 STRING
+
+### ❌ C++ only
+
+* `string` (STL)
+* `<string>` header
+* Functions like `length()`, `append()`
+
+### ✅ C
+
+* Strings are **character arrays**
+
+```c
+char str[20] = "Hello";
+```
+
+* Uses `<string.h>` functions: `strlen`, `strcpy`
+
+---
+
+## 💎 BOOLEAN
+
+### ❌ C++ only
+
+* `bool` type
+* `true` / `false`
+
+### ✅ C
+
+* Uses `int`
+
+```c
+int flag = 1; // true
+```
+
+---
+
+## 💎 NULL POINTER
+
+### ❌ C++ only
+
+* `nullptr`
+
+### ✅ C
+
+* Uses `NULL` or `0`
+
+```c
+int *p = NULL;
+```
+
+---
+
+## 💎 OPERATORS
+
+### ❌ C++ only
+
+* `::` scope resolution
+* `->` with classes
+* Operator overloading
+
+### ✅ C
+
+* No scope resolution
+* No operator overloading
+* Basic arithmetic, logical, bitwise same
+
+---
+
+## 💎 PUNCTUATORS
+
+### ❌ C++ only
+
+* `::`
+* `...` (limited use in C via stdarg)
+
+### ✅ C
+
+* `; { } ( ) [ ] #`
+
+---
+
+## 📌 FINAL ONE-LINE SUMMARY (VERY IMPORTANT)
+
+* **Character set → SAME**
+* **Tokens → SAME concept**
+* **Identifiers → SAME**
+* **Keywords → DIFFERENT**
+* **string, bool, nullptr, OOP, templates → C++ ONLY**
+* **C is procedural, C++ is procedural + OOP**
+
+If you want, I can now:
+
+* Convert this into **pure C notes**
+* Or make a **C vs C++ comparison table (exam ready)**
+
 
 * **Structure of C Program**:
 
