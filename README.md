@@ -25,9 +25,27 @@
 
 ## History of C
 
-* Developed in **1972** by **Dennis Ritchie** at **Bell Labs**.
-* Derived from **B language**, mainly for **UNIX OS development**.
-* Foundation for **C++, Java, Python, C#**.
+* C is a procedural, general-purpose programming language.
+* It was developed by Dennis Ritchie in 1972 at Bell Laboratories (AT&T).
+* C was designed mainly for system programming and to implement UNIX.
+* By 1973, the UNIX operating system was mostly rewritten in C.
+* C overcame limitations of B and BCPL, such as lack of data types and weak structure.
+* It is widely used because it is memory-efficient, portable, and offers low-level control.
+* Dennis Ritchie and Brian Kernighan authored *The C Programming Language* (K&R).
+* The K&R book established the standard syntax and semantics of C.
+
+<img width="1042" height="745" alt="image" src="https://github.com/user-attachments/assets/ea14c032-6b0e-45cd-94d7-c0b11ab615b8" />
+
+| **C Standard**       | **Year**    | **Key Features / Changes**                                                                                                                                |
+| -------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ANSI C (C89/C90)** | 1989 / 1990 | Introduced function prototypes, standard libraries, formal libraries, and stricter type checking. Approved by ANSI (C89) and ISO (C90).                   |
+| **C99**              | 1999        | Added inline functions, variable-length arrays, complex numbers, `long long` data type, single-line comments (`//`), and improved floating-point support. |
+| **C11**              | 2011        | Focused on safety and concurrency; introduced generic programming, multithreading support (`threads.h`), and Unicode support.                             |
+| **C17 / C18**        | 2017        | Minor revision of C11; fixed bugs and clarified ambiguities, with no major new features.                                                                  |
+| **C23**              | 2023        | Latest standard; introduced features like `nullptr`, binary literals, and improved support for modern hardware architectures.                             |
+
+
+
 
 ---
 
