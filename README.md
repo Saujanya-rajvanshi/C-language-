@@ -74,7 +74,7 @@
 - [character set](#character-set)
 - [tokens](#Tokens)
 - [Barebones of C Program](#barebones-of-C-program)
-- [Data Types (overview)](#Data-Types-overview)
+- [Data Types (overview)](#Data-Types-Overview)
 - [Variables & Constants](#Variables-Constants)
 - [Type Modifiers](#Type-Modifiers)
 - [Type Conversion Type Casting](#Type-Conversion-Type-Casting)
@@ -265,7 +265,7 @@ int *p = NULL;
 
 ---
 
-## Data Types overview
+## Data Types Overview
 ✅ **NO difference**
 
 ## Variables Constants
@@ -330,6 +330,41 @@ So in **C**, everything is correct **except `namespace`, `constexpr`, and `mutab
 
 ---
 
+## Type Modifiers 
+
+Type modifiers also change **range** and **storage size** in C.
+
+### Common Modifiers (C)
+
+* `short`
+* `long`
+* `long long`
+* `signed`
+* `unsigned`
+
+### Validity in C
+
+* Modifiers must be applied to **integer types** (`int`, `char`)
+* `long long` is valid **from C99 onward**
+* `signed` / `unsigned` work with `char`, `short`, `int`, `long`, `long long`
+
+### Notes (C-specific)
+
+* **Valid combinations depend on the base type** ✅ (same as C++)
+* **Overflow & underflow**
+
+  * **Signed integer overflow → undefined behavior**
+  * **Unsigned overflow → well-defined (wraps around)**
+* **Integer promotion occurs in expressions** ✅
+  (`char`, `short` → promoted to `int` or `unsigned int`)
+
+### Key Difference (C vs C++)
+
+* C is more **lenient** with implicit conversions
+* C++ is **stricter** with type safety
+
+📌 **Conclusion:**
+Your notes are **correct for C**, with the same core rules as C++.
 
 
 
