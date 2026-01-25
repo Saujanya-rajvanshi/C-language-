@@ -23,7 +23,8 @@
 
 ---
 
-## History of C
+###### history of c
+🎗 HISTORY
 
 * C is a procedural, general-purpose programming language.
 * It was developed by Dennis Ritchie in 1972 at Bell Laboratories (AT&T).
