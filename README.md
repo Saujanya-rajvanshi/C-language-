@@ -350,139 +350,151 @@ Type modifiers also change **range** and **storage size** in C.
 * `signed` / `unsigned` work with `char`, `short`, `int`, `long`, `long long`
 
 
-## Type Conversion & Type Casting
+Got it 👍
+Below are the **same notes**, but rewritten **purely for C (and contrasted where needed with C++)**, keeping **structure, headings, and flow the same** so your notes stay consistent.
 
-### Type Conversion (Implicit)
+---
 
-* Automatic conversion by compiler.
-* Happens in expressions.
+* [Type Conversion Type Casting (C)](#Type-Conversion-Type-Casting-C)
+* [sizeof operator (C)](#sizeof-operator-C)
+* [Comments (C)](#Comments-C)
+* [data handling basics (C)](#data-handling-basics-C)
+* [boiler plate code (C)](#boiler-plate-code-C)
+* [next line (C)](#next-line-C)
+* [Escape Sequences (C)](#Escape-Sequences-C)
+* [output & input (C)](#output-and-input-C)
+
+---
+
+###### Type Conversion Type Casting (C)
+
+## 🧩 Type Conversion Type Casting (C)
+
+Type conversion changes one data type into another.
+
+#### Implicit Conversion
+
+* Done automatically by compiler
+* Happens during expressions
+* May cause **data loss**
 
 ```c
 int a = 5;
-float b = a;   // implicit conversion
+float b = a;   // implicit
 ```
 
-📌 **Rules (C & C++)**
+#### Explicit Conversion
 
-* Lower → higher type promoted
-* `char`, `short` → `int`
-* Mixed expressions follow **usual arithmetic conversions**
-
-
-### Type Casting (Explicit)
-
-❌ C style
+* Programmer controlled
+* Done using **C-style casting only**
 
 ```c
-int x = (int)3.5;
+float x = 5.6;
+int y = (int)x;
 ```
 
-❌ C++ style (preferred)
+#### Casting Types in C
 
-```cpp
-int x = static_cast<int>(3.5);
-```
+* **Only C-style cast** available
+* Syntax: `(type)expression`
 
-📌 **C++ casting types**
+📌 C does **not support**:
 
 * `static_cast`
-* `dynamic_cast`
 * `const_cast`
 * `reinterpret_cast`
+* `dynamic_cast`
 
+#### Important Concepts
 
-## sizeof Operator
+* Narrowing conversions possible
+* No user-defined conversions
+* No conversion constructors
+* No `explicit` keyword in C
 
-✅ **Same in C and C++**
+---
 
-* Returns size in **bytes**
-* Evaluated at compile time (mostly)
+###### sizeof operator (C)
 
-```c
-sizeof(int)
-sizeof(arr)
-sizeof(variable)
-```
+## 🧩 sizeof Operator (C)
 
-📌 Parentheses optional for variables
+`sizeof` is a **compile-time operator** used to find memory size.
 
+#### Key Points
 
-## Comments
+* Returns value in bytes
+* Result type is `size_t`
+* `sizeof(array)` gives total array size
+* `sizeof(pointer)` gives pointer size
+* Structure padding affects result
+* No side effects
+* `sizeof(char) == 1`
 
-✅ **Same in C and C++**
-
-* Single-line
-
-```c
-// comment
-```
-
-* Multi-line
-
-```c
-/* multi
-   line */
-```
-
-
-## Data Handling Basics
-
-### Input / Output
-
-❌ C
+📌 Example:
 
 ```c
-scanf("%d", &x);
-printf("%d", x);
+int a;
+printf("%zu", sizeof(a));
 ```
 
-❌ C++
+---
 
-```cpp
-cin >> x;
-cout << x;
-```
+###### Comments (C)
 
-📌 C uses **format specifiers**, C++ uses **stream operators**
+## 🧩 Comments (C)
 
+Comments are used to **explain code** and are ignored by the compiler.
 
-## Memory Management
+#### Types
 
-### Static Memory
+* **Single-line:** `//`  (C99 onwards)
+* **Multi-line:** `/* */`
 
-* Allocated at compile time
-* Global & static variables
+📌 Nested comments are **not allowed**
+
+---
+
+###### data handling basics (C)
+
+## 🧩 Data Handling (C)
+
+**Data handling** means storing, reading, modifying, and managing data in a program.
+
+* Data is stored using **variables**
+
+* Data types define stored data:
+
+  * `int` → integers
+  * `float / double` → decimal values
+  * `char` → single character
+  * `char[]` → strings
+
+* Operations on data:
+
+  * Assignment (`=`)
+  * Arithmetic (`+ - * / %`)
+  * Comparison (`== != < > <= >=`)
+
+* Proper data handling avoids:
+
+  * Overflow
+  * Undefined behavior
+  * Type mismatch errors
+
+📌 Example:
 
 ```c
-static int x;
+int age = 20;
+float price = 99.5;
 ```
 
+---
 
-### Dynamic Memory (Heap)
+## Boiler Plate Code (C)
 
-❌ C
+**Boilerplate code** is the **minimum required code** to run a C program.
 
-```c
-int *p = (int*)malloc(sizeof(int));
-free(p);
-```
-
-❌ C++
-
-```cpp
-int *p = new int;
-delete p;
-```
-
-📌 **Difference**
-
-* C → `malloc/free`
-* C++ → `new/delete` (constructor-aware)
-
-
-## Boiler Plate Code
-
-### C Program Structure
+### Standard C boilerplate:
 
 ```c
 #include <stdio.h>
@@ -492,193 +504,113 @@ int main() {
 }
 ```
 
-### C++ Program Structure
+### Explanation:
 
-```cpp
-#include <iostream>
-using namespace std;
+* `#include <stdio.h>` → input/output
+* `int main()` → program execution starts here
+* `return 0;` → successful program termination
 
-int main() {
-    return 0;
-}
-```
-
-📌 Execution starts from `main()`
-
-
-## Next Line
-
-❌ C
-
-```c
-printf("\n");
-```
-
-❌ C++
-
-```cpp
-cout << endl;
-```
-
-📌 `endl` also **flushes buffer**
-
-
-## Escape Sequences
-
-✅ **Same**
-
-| Sequence | Meaning      |
-| -------- | ------------ |
-| `\n`     | New line     |
-| `\t`     | Tab          |
-| `\\`     | Backslash    |
-| `\"`     | Double quote |
-| `\'`     | Single quote |
-
-
-## Control Statements (Flow Control)
-
-### Decision Making
-
-* `if`
-* `if–else`
-* `switch`
-
-📌 `switch` works with:
-
-* C → `int`, `char`
-* C++ → `int`, `char`, `enum`
-
-
-### Looping
-
-* `for`
-* `while`
-* `do–while`
-
-
-### Jump Statements
-
-* `break`
-* `continue`
-* `goto` (not recommended)
-* `return`
-
-
-## Functions
-
-### Declaration
-
-```c
-int add(int, int);
-```
-
-### Definition
-
-```c
-int add(int a, int b) {
-    return a + b;
-}
-```
-
-📌 C++ supports:
-
-* Function overloading
-* Default arguments
-  ❌ C does not
-
-
-## Arrays
-
-❌ C
-
-```c
-int arr[5];
-```
-
-❌ C++
-
-```cpp
-int arr[5];
-```
-
-📌 Arrays are **fixed size**
-
-
-## Strings
-
-❌ C
-
-```c
-char str[20] = "Hello";
-```
-
-Uses:
-
-* `strlen`
-* `strcpy`
-* `strcmp`
-
-❌ C++
-
-```cpp
-string s = "Hello";
-```
-
-Uses:
-
-* `length()`
-* `append()`
-* `compare()`
-
-
-## Structures
-
-❌ C
-
-```c
-struct Student {
-    int id;
-};
-```
-
-❌ C++
-
-```cpp
-struct Student {
-    int id;
-};
-```
-
-📌 C++ allows:
-
-* Member functions
-* Access specifiers
-
-
-## Pointers
-
-* Stores address of variable
-
-```c
-int x = 10;
-int *p = &x;
-```
-
-📌 Pointer arithmetic allowed in both
-
-
-## File Handling
-
-❌ C
-
-* `fopen`, `fclose`, `fprintf`, `fscanf`
-
-❌ C++
-
-* `ifstream`, `ofstream`
+📌 `using namespace std;` ❌ **not used in C**
 
 ---
+
+###### next line (C)
+
+## 🧩 Next Line (C)
+
+To move output to the **next line**, C uses:
+
+### `\n`
+
+```c
+printf("Hello\n");
+```
+
+📌 `endl` ❌ **not available in C**
+
+---
+
+###### Escape Sequences (C)
+
+## 🧩 Escape Sequences (C)
+
+Escape sequences are **special character combinations** used inside **character and string literals**.
+
+They start with a **backslash (`\`)**.
+
+### Common Escape Sequences
+
+| Escape | Meaning         |
+| ------ | --------------- |
+| `\n`   | New line        |
+| `\t`   | Horizontal tab  |
+| `\v`   | Vertical tab    |
+| `\b`   | Backspace       |
+| `\r`   | Carriage return |
+| `\f`   | Form feed       |
+| `\a`   | Alert (beep)    |
+| `\\`   | Backslash       |
+| `\'`   | Single quote    |
+| `\"`   | Double quote    |
+| `\0`   | Null character  |
+
+### Numeric Escape Sequences
+
+* **Octal** → `\nnn`
+* **Hexadecimal** → `\xhh`
+
+📌 Unicode escapes ❌ **not standard in C**
+
+---
+
+### Important Concepts
+
+* Used in `' '` and `" "`
+* Interpreted at compile time
+* `\0` marks end of C strings
+* Invalid sequences → warnings or undefined behavior
+
+---
+
+###### output and input (C)
+
+## 🧩 Output & Input (C)
+
+### Output → `printf()`
+
+Used to display output.
+
+```c
+printf("Hello World");
+printf("%d", x);
+```
+
+### Input → `scanf()`
+
+Used to take input from user.
+
+```c
+scanf("%d", &x);
+scanf("%d %d", &a, &b);
+```
+
+### Important rules:
+
+* Format specifiers are mandatory
+* Address operator `&` required
+* Strings need character arrays
+
+📌 Example:
+
+```c
+int n;
+scanf("%d", &n);
+printf("Value: %d", n);
+```
+
+---
+
+
 
 
 
