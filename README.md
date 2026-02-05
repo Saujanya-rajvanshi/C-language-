@@ -13,13 +13,15 @@
 * [Pointers](#pointers)
 * [Dynamic Memory Allocation](#dynamic-memory-allocation)
 * [Structures & Unions](#structures-unions)
-* [File Handling](#file-handling)
-* [Preprocessor & Macros](#preprocessor-macros)
-* [String Handling](#string-handling)
-* [Standard Libraries](#standard-libraries)
-* [Advanced Concepts](#advanced-concepts)
-* [Competitive Programming / DSA Readiness](#competitive-programming)
-* [Basic Maths Codes](https://github.com/Saujanya-rajvanshi/basic-maths)
+* [Object-Oriented Programming (OOP)](https://github.com/Saujanya-rajvanshi/THEORY?tab=readme-ov-file#Oops)
+- [Exception Handling](#exception-handling)
+- [File Handling](#file-handling)
+- [Templates](#templates)
+- [STL (Standard Template Library)](https://github.com/Saujanya-rajvanshi/STL)
+- [Advanced C++ Concepts](#advanced-concept)
+- [Competitive Programming / DSA Readiness](#competitive-programming)
+- [string manipulation](#string-manipulation)
+- [basic maths codes](https://github.com/Saujanya-rajvanshi/basic-maths)
 
 ---
 
@@ -572,9 +574,359 @@ printf("Value: %d", n);
 ```
 
 ---
+###### header
+# 🎗 Header Files & Namespaces — **C vs C++**
 
+### 🔹 Header Files
 
+✅ **Same concept**: header files contain declarations.
 
+### ❌ What changes in C
+
+* **No `<iostream>`**
+* Uses **C standard headers**:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+```
+
+* Headers usually end with `.h`
+* C headers **do not contain classes**
+
+---
+
+### ❌ Namespaces
+
+* **Namespaces are NOT supported in C**
+* `using namespace std;` ❌ not allowed
+* No `std::` prefix
+
+📌 Reason: C does not support OOP or name scoping via namespaces
+
+---
+
+### ❌ Scope Resolution Operator `::`
+
+* `::` ❌ **NOT available in C**
+* Cannot access:
+
+  * namespace members
+  * class static members
+
+📌 Global variables accessed directly by name
+
+---
+
+### ❌ `<bits/stdc++.h>`
+
+* ❌ **Not used in C**
+* GCC-specific and C++-only
+* C requires explicit headers
+
+---
+###### Data handling
+# 🎗 Data Handling — **C vs C++**
+
+### 🔹 Strings
+
+❌ C does **not** have `string` data type
+
+```c
+char name[20];
+```
+
+* Uses `char[]`
+* Requires `<string.h>`
+* Manual memory handling
+
+---
+
+### 🔹 Boolean Type
+
+* `bool` ❌ **not native in C (before C99)**
+
+```c
+#include <stdbool.h>
+bool flag = true;
+```
+
+📌 In old C:
+
+* `0` → false
+* `1` → true
+
+---
+
+### 🔹 Mutable / Immutable
+
+* No concept of immutability by default
+* Only achievable using `const`
+* No string immutability like C++ STL
+
+---
+
+### ❌ References
+
+* References (`int &x`) ❌ **not supported**
+* Only pointers are available
+
+---
+
+### ❌ Classes
+
+* `class` ❌ **not supported**
+* Use `struct` only
+* No access specifiers (`private`, `public`)
+
+---
+
+### ❌ `using` keyword
+
+* `using` for type alias ❌ not available
+* Use `typedef`
+
+```c
+typedef unsigned int uint;
+```
+
+---
+
+###### flow of control
+# 🎗 Flow of Control — **C vs C++**
+
+### ✅ Same Flow Control Structures
+
+These are **identical** in C and C++:
+
+* `if`
+* `if-else`
+* `switch`
+* `for`
+* `while`
+* `do-while`
+* `break`
+* `continue`
+* `goto`
+* `return`
+* Ternary operator `?:`
+
+---
+
+### ❌ switch limitations
+
+* `switch` in C supports:
+
+  * `int`
+  * `char`
+* ❌ No `enum class` (C++ only)
+* ❌ No `string` in switch
+
+---
+
+### ❌ Range-based for loop
+
+* ❌ **Not supported in C**
+
+```cpp
+for (int x : arr)  // C++ only
+```
+
+---
+
+### ❌ Boolean conditions
+
+* No `true` / `false` keywords (pre-C99)
+* Conditions rely on:
+
+  * `0` → false
+  * non-zero → true
+
+---
+
+# 🔥 Quick Comparison Snapshot
+
+| Feature           | C | C++ |
+| ----------------- | - | --- |
+| Namespaces        | ❌ | ✅   |
+| `::` operator     | ❌ | ✅   |
+| Classes           | ❌ | ✅   |
+| References        | ❌ | ✅   |
+| `string`          | ❌ | ✅   |
+| STL               | ❌ | ✅   |
+| Range-based loop  | ❌ | ✅   |
+| `<bits/stdc++.h>` | ❌ | ✅   |
+
+---
+###### functions
+# 🎗 FUNCTION
+### ✅ SAME in C
+
+* Function definition & declaration
+* Function call
+* Return type
+* Void functions
+* Call by value
+* Recursion
+* Advantages of functions
+* Call stack concept
+
+### ❌ REMOVE / CHANGE for C
+
+| C++ Feature in Your Notes    | Status in C     | What to Do           |
+| ---------------------------- | --------------- | -------------------- |
+| Call by reference (`int &x`) | ❌ Not supported | Use pointers instead |
+| Default arguments            | ❌ Not supported | Remove completely    |
+| Inline keyword               | ❌ Not standard  | Remove               |
+| Function overloading         | ❌ Not supported | Remove               |
+| Compile-time polymorphism    | ❌ Not supported | Remove               |
+| Reference-based passing      | ❌ Not available | Use pointer-based    |
+
+### ✅ C Replacement Example
+
+```c
+void fun(int *x);   // instead of int &x
+```
+
+📌 **Exam Line (C):**
+
+> C supports only **call by value** and **call by address (pointer)**.
+
+---
+
+###### pointers
+# 🎗 POINTERS
+
+### ✅ SAME in C
+
+* Pointer declaration & initialization
+* Dereferencing
+* Null pointer
+* Void pointer
+* Wild pointer
+* Dangling pointer
+* Pointer arithmetic
+* Pointer & arrays
+* Pointer to pointer
+* Call by reference using pointers
+* Advantages & disadvantages
+* Common mistakes
+
+### ❌ REMOVE / CHANGE for C
+
+| C++ Feature         | Status in C     |
+| ------------------- | --------------- |
+| `nullptr`           | ❌ Not available |
+| Smart pointers      | ❌ Not available |
+| References (`int&`) | ❌ Not available |
+| `new` / `delete`    | ❌ Not available |
+
+### ✅ C Version
+
+```c
+int *p = NULL;   // use NULL, not nullptr
+```
+
+📌 **Exam Line (C):**
+
+> C uses **raw pointers only**, no automatic memory management.
+
+---
+
+###### dynamic memory allocation
+# 🎗 DYNAMIC MEMORY ALLOCATIONS 
+
+### ✅ SAME in C
+
+* Runtime allocation
+* Heap memory
+* Stack vs Heap concept
+* Use in data structures
+* Common errors (memory leak, dangling pointer)
+* Advantages & disadvantages
+
+### ❌ REMOVE / CHANGE for C
+
+| C++ Feature                     | Status in C     |
+| ------------------------------- | --------------- |
+| `new`                           | ❌ Not supported |
+| `delete`                        | ❌ Not supported |
+| Constructors/destructors        | ❌ Not supported |
+| Smart pointers                  | ❌ Not supported |
+| Exception on allocation failure | ❌ Not supported |
+
+### ✅ C Replacement
+
+```c
+int *p = (int*)malloc(sizeof(int));
+free(p);
+```
+
+### Dynamic Array (C)
+
+```c
+int *arr = (int*)malloc(n * sizeof(int));
+free(arr);
+```
+
+📌 **Exam Line (C):**
+
+> C uses `malloc`, `calloc`, `realloc`, and `free` for dynamic memory.
+
+---
+
+###### structures and unions
+# 🎗 STRUCTURES AND UNIONS 
+
+### ✅ SAME in C
+
+* Structure definition
+* Union definition
+* Memory behavior
+* Structure vs Union comparison
+* Nested structures
+* Access using `.` and `->`
+* Use cases
+* Padding concept
+
+### ❌ REMOVE / CHANGE for C
+
+| C++ Feature              | Status in C      |
+| ------------------------ | ---------------- |
+| Functions inside struct  | ❌ Not allowed    |
+| Object-like usage        | ❌ Not allowed    |
+| `using` keyword          | ❌ Not available  |
+| C++ style struct = class | ❌ Not applicable |
+
+### ✅ C Structure Usage
+
+```c
+struct Student {
+    int roll;
+};
+struct Student s1;
+```
+
+📌 **Exam Line (C):**
+
+> In C, a structure **contains only data**, not functions.
+
+---
+
+## 🎯 FINAL VERDICT (VERY IMPORTANT)
+
+### ✔️ You **CAN reuse** these notes for C IF:
+
+* You **remove C++-only features**
+* You **replace references with pointers**
+* You **replace `new/delete` with `malloc/free`**
+* You **remove OOP-related behavior**
+
+### ❌ You **CANNOT directly use** them for C without modification.
+
+---
 
 
 
