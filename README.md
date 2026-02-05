@@ -349,26 +349,7 @@ Type modifiers also change **range** and **storage size** in C.
 * `long long` is valid **from C99 onward**
 * `signed` / `unsigned` work with `char`, `short`, `int`, `long`, `long long`
 
-
-Got it 👍
-Below are the **same notes**, but rewritten **purely for C (and contrasted where needed with C++)**, keeping **structure, headings, and flow the same** so your notes stay consistent.
-
----
-
-* [Type Conversion Type Casting (C)](#Type-Conversion-Type-Casting-C)
-* [sizeof operator (C)](#sizeof-operator-C)
-* [Comments (C)](#Comments-C)
-* [data handling basics (C)](#data-handling-basics-C)
-* [boiler plate code (C)](#boiler-plate-code-C)
-* [next line (C)](#next-line-C)
-* [Escape Sequences (C)](#Escape-Sequences-C)
-* [output & input (C)](#output-and-input-C)
-
----
-
-###### Type Conversion Type Casting (C)
-
-## 🧩 Type Conversion Type Casting (C)
+## Type Conversion Type Casting 
 
 Type conversion changes one data type into another.
 
@@ -412,11 +393,8 @@ int y = (int)x;
 * No conversion constructors
 * No `explicit` keyword in C
 
----
 
-###### sizeof operator (C)
-
-## 🧩 sizeof Operator (C)
+## sizeof Operator 
 
 `sizeof` is a **compile-time operator** used to find memory size.
 
@@ -437,11 +415,8 @@ int a;
 printf("%zu", sizeof(a));
 ```
 
----
 
-###### Comments (C)
-
-## 🧩 Comments (C)
+## Comments (C)
 
 Comments are used to **explain code** and are ignored by the compiler.
 
@@ -452,11 +427,9 @@ Comments are used to **explain code** and are ignored by the compiler.
 
 📌 Nested comments are **not allowed**
 
----
 
-###### data handling basics (C)
 
-## 🧩 Data Handling (C)
+## Data Handling 
 
 **Data handling** means storing, reading, modifying, and managing data in a program.
 
@@ -488,7 +461,6 @@ int age = 20;
 float price = 99.5;
 ```
 
----
 
 ## Boiler Plate Code (C)
 
@@ -512,11 +484,8 @@ int main() {
 
 📌 `using namespace std;` ❌ **not used in C**
 
----
 
-###### next line (C)
-
-## 🧩 Next Line (C)
+## Next Line 
 
 To move output to the **next line**, C uses:
 
@@ -528,11 +497,8 @@ printf("Hello\n");
 
 📌 `endl` ❌ **not available in C**
 
----
 
-###### Escape Sequences (C)
-
-## 🧩 Escape Sequences (C)
+## Escape Sequences 
 
 Escape sequences are **special character combinations** used inside **character and string literals**.
 
@@ -570,11 +536,8 @@ They start with a **backslash (`\`)**.
 * `\0` marks end of C strings
 * Invalid sequences → warnings or undefined behavior
 
----
 
-###### output and input (C)
-
-## 🧩 Output & Input (C)
+## Output & Input 
 
 ### Output → `printf()`
 
