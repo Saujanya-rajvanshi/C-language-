@@ -349,23 +349,339 @@ Type modifiers also change **range** and **storage size** in C.
 * `long long` is valid **from C99 onward**
 * `signed` / `unsigned` work with `char`, `short`, `int`, `long`, `long long`
 
-### Notes (C-specific)
 
-* **Valid combinations depend on the base type** ✅ (same as C++)
-* **Overflow & underflow**
+## Type Conversion & Type Casting
 
-  * **Signed integer overflow → undefined behavior**
-  * **Unsigned overflow → well-defined (wraps around)**
-* **Integer promotion occurs in expressions** ✅
-  (`char`, `short` → promoted to `int` or `unsigned int`)
+### Type Conversion (Implicit)
 
-### Key Difference (C vs C++)
+* Automatic conversion by compiler.
+* Happens in expressions.
 
-* C is more **lenient** with implicit conversions
-* C++ is **stricter** with type safety
+```c
+int a = 5;
+float b = a;   // implicit conversion
+```
 
-📌 **Conclusion:**
-Your notes are **correct for C**, with the same core rules as C++.
+📌 **Rules (C & C++)**
+
+* Lower → higher type promoted
+* `char`, `short` → `int`
+* Mixed expressions follow **usual arithmetic conversions**
+
+
+### Type Casting (Explicit)
+
+❌ C style
+
+```c
+int x = (int)3.5;
+```
+
+❌ C++ style (preferred)
+
+```cpp
+int x = static_cast<int>(3.5);
+```
+
+📌 **C++ casting types**
+
+* `static_cast`
+* `dynamic_cast`
+* `const_cast`
+* `reinterpret_cast`
+
+
+## sizeof Operator
+
+✅ **Same in C and C++**
+
+* Returns size in **bytes**
+* Evaluated at compile time (mostly)
+
+```c
+sizeof(int)
+sizeof(arr)
+sizeof(variable)
+```
+
+📌 Parentheses optional for variables
+
+
+## Comments
+
+✅ **Same in C and C++**
+
+* Single-line
+
+```c
+// comment
+```
+
+* Multi-line
+
+```c
+/* multi
+   line */
+```
+
+
+## Data Handling Basics
+
+### Input / Output
+
+❌ C
+
+```c
+scanf("%d", &x);
+printf("%d", x);
+```
+
+❌ C++
+
+```cpp
+cin >> x;
+cout << x;
+```
+
+📌 C uses **format specifiers**, C++ uses **stream operators**
+
+
+## Memory Management
+
+### Static Memory
+
+* Allocated at compile time
+* Global & static variables
+
+```c
+static int x;
+```
+
+
+### Dynamic Memory (Heap)
+
+❌ C
+
+```c
+int *p = (int*)malloc(sizeof(int));
+free(p);
+```
+
+❌ C++
+
+```cpp
+int *p = new int;
+delete p;
+```
+
+📌 **Difference**
+
+* C → `malloc/free`
+* C++ → `new/delete` (constructor-aware)
+
+
+## Boiler Plate Code
+
+### C Program Structure
+
+```c
+#include <stdio.h>
+
+int main() {
+    return 0;
+}
+```
+
+### C++ Program Structure
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    return 0;
+}
+```
+
+📌 Execution starts from `main()`
+
+
+## Next Line
+
+❌ C
+
+```c
+printf("\n");
+```
+
+❌ C++
+
+```cpp
+cout << endl;
+```
+
+📌 `endl` also **flushes buffer**
+
+
+## Escape Sequences
+
+✅ **Same**
+
+| Sequence | Meaning      |
+| -------- | ------------ |
+| `\n`     | New line     |
+| `\t`     | Tab          |
+| `\\`     | Backslash    |
+| `\"`     | Double quote |
+| `\'`     | Single quote |
+
+
+## Control Statements (Flow Control)
+
+### Decision Making
+
+* `if`
+* `if–else`
+* `switch`
+
+📌 `switch` works with:
+
+* C → `int`, `char`
+* C++ → `int`, `char`, `enum`
+
+
+### Looping
+
+* `for`
+* `while`
+* `do–while`
+
+
+### Jump Statements
+
+* `break`
+* `continue`
+* `goto` (not recommended)
+* `return`
+
+
+## Functions
+
+### Declaration
+
+```c
+int add(int, int);
+```
+
+### Definition
+
+```c
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+📌 C++ supports:
+
+* Function overloading
+* Default arguments
+  ❌ C does not
+
+
+## Arrays
+
+❌ C
+
+```c
+int arr[5];
+```
+
+❌ C++
+
+```cpp
+int arr[5];
+```
+
+📌 Arrays are **fixed size**
+
+
+## Strings
+
+❌ C
+
+```c
+char str[20] = "Hello";
+```
+
+Uses:
+
+* `strlen`
+* `strcpy`
+* `strcmp`
+
+❌ C++
+
+```cpp
+string s = "Hello";
+```
+
+Uses:
+
+* `length()`
+* `append()`
+* `compare()`
+
+
+## Structures
+
+❌ C
+
+```c
+struct Student {
+    int id;
+};
+```
+
+❌ C++
+
+```cpp
+struct Student {
+    int id;
+};
+```
+
+📌 C++ allows:
+
+* Member functions
+* Access specifiers
+
+
+## Pointers
+
+* Stores address of variable
+
+```c
+int x = 10;
+int *p = &x;
+```
+
+📌 Pointer arithmetic allowed in both
+
+
+## File Handling
+
+❌ C
+
+* `fopen`, `fclose`, `fprintf`, `fscanf`
+
+❌ C++
+
+* `ifstream`, `ofstream`
+
+---
+
+
+
 
 
 
