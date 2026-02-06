@@ -585,7 +585,7 @@ printf("Value: %d", n);
 
 
 ###### header
-# 🎗 Header Files & Namespaces — **C vs C++**
+# 🎗 Header Files & Namespaces (C)
 
 Header files are files with extension .h that contain function declarations, macros, constants, and data type definitions.
 
@@ -789,10 +789,40 @@ Header guards prevent **multiple inclusion errors**.
 * Multiple definitions
 * Wrong include path
 
-## One-Line Definition (Exam)
 
-> **Header file** is a file containing **declarations and macros** that are shared between multiple source files in C.
+## C Standard Header Files 
 
+| Header File       | Purpose                    | Important Functions / Contents                                                                                                            |
+| ----------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **`stdio.h`**     | Standard input/output      | `printf()`, `scanf()`, `getchar()`, `putchar()`, `gets()`, `puts()`, `fopen()`, `fclose()`, `fprintf()`, `fscanf()`, `fgets()`, `fputs()` |
+| **`stdlib.h`**    | General utilities          | `malloc()`, `calloc()`, `realloc()`, `free()`, `exit()`, `atoi()`, `atof()`, `rand()`, `srand()`, `system()`                              |
+| **`string.h`**    | String handling            | `strlen()`, `strcpy()`, `strcat()`, `strcmp()`, `strncpy()`, `strncat()`, `strncmp()`, `strchr()`, `strstr()`                             |
+| **`math.h`**      | Mathematical functions     | `sqrt()`, `pow()`, `sin()`, `cos()`, `tan()`, `log()`, `log10()`, `ceil()`, `floor()`, `fabs()`                                           |
+| **`ctype.h`**     | Character handling         | `isalpha()`, `isdigit()`, `isalnum()`, `isspace()`, `islower()`, `isupper()`, `tolower()`, `toupper()`                                    |
+| **`time.h`**      | Date & time                | `time()`, `clock()`, `difftime()`, `ctime()`, `localtime()`, `strftime()`                                                                 |
+| **`limits.h`**    | Integer limits             | `INT_MAX`, `INT_MIN`, `CHAR_MAX`, `CHAR_MIN`, `LONG_MAX`                                                                                  |
+| **`float.h`**     | Floating-point limits      | `FLT_MAX`, `FLT_MIN`, `DBL_MAX`, `DBL_MIN`                                                                                                |
+| **`assert.h`**    | Debugging                  | `assert()`                                                                                                                                |
+| **`errno.h`**     | Error handling             | `errno`, error macros                                                                                                                     |
+| **`setjmp.h`**    | Non-local jumps            | `setjmp()`, `longjmp()`                                                                                                                   |
+| **`signal.h`**    | Signal handling            | `signal()`, `raise()`                                                                                                                     |
+| **`stdarg.h`**    | Variable arguments         | `va_start()`, `va_arg()`, `va_end()`                                                                                                      |
+| **`stdbool.h`**   | Boolean support (C99)      | `bool`, `true`, `false`                                                                                                                   |
+| **`stddef.h`**    | Common definitions         | `size_t`, `ptrdiff_t`, `NULL`, `offsetof()`                                                                                               |
+| **`stdint.h`**    | Fixed-width integers       | `int8_t`, `int16_t`, `int32_t`, `uint32_t`                                                                                                |
+| **`inttypes.h`**  | Integer formatting         | `printf` macros for `stdint`                                                                                                              |
+| **`locale.h`**    | Localization               | `setlocale()`, `localeconv()`                                                                                                             |
+| **`wchar.h`**     | Wide characters            | `wprintf()`, `wcscpy()`, `wcslen()`                                                                                                       |
+| **`wctype.h`**    | Wide char classification   | `iswalpha()`, `towlower()`                                                                                                                |
+| **`complex.h`**   | Complex numbers            | `creal()`, `cimag()`, `csqrt()`                                                                                                           |
+| **`tgmath.h`**    | Type-generic math          | Generic math macros                                                                                                                       |
+| **`fenv.h`**      | Floating-point environment | `feclearexcept()`, `feraiseexcept()`                                                                                                      |
+| **`stdalign.h`**  | Alignment (C11)            | `alignas`, `alignof`                                                                                                                      |
+| **`stdatomic.h`** | Atomic operations (C11)    | `atomic_int`, atomic functions                                                                                                            |
+| **`threads.h`**   | Multithreading (C11)       | `thrd_create()`, `mtx_lock()`                                                                                                             |
+| **`uchar.h`**     | Unicode characters         | `char16_t`, `char32_t`                                                                                                                    |
+
+---
 
 
 
