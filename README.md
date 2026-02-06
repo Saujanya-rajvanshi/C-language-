@@ -574,17 +574,20 @@ printf("Value: %d", n);
 ```
 
 ---
+
+
+
+
+
+
+
+
+
+
 ###### header
 # 🎗 Header Files & Namespaces — **C vs C++**
 
-### 🔹 Header Files
-
-✅ **Same concept**: header files contain declarations.
-
-### ❌ What changes in C
-
-* **No `<iostream>`**
-* Uses **C standard headers**:
+Header files are files with extension .h that contain function declarations, macros, constants, and data type definitions.
 
 ```c
 #include <stdio.h>
@@ -596,7 +599,18 @@ printf("Value: %d", n);
 * Headers usually end with `.h`
 * C headers **do not contain classes**
 
----
+## Why Header Files Are Used
+
+* Separate **declaration** from **definition**
+* Avoid code duplication
+* Enable modular programming
+* Improve readability and maintenance
+* Allow sharing of functions across files
+
+📌 **Rule:**
+
+> Function definitions are written in `.c` files, declarations in `.h` files.
+
 
 ### ❌ Namespaces
 
@@ -606,7 +620,6 @@ printf("Value: %d", n);
 
 📌 Reason: C does not support OOP or name scoping via namespaces
 
----
 
 ### ❌ Scope Resolution Operator `::`
 
@@ -618,15 +631,181 @@ printf("Value: %d", n);
 
 📌 Global variables accessed directly by name
 
----
 
-### ❌ `<bits/stdc++.h>`
+## Including Header Files
 
-* ❌ **Not used in C**
-* GCC-specific and C++-only
-* C requires explicit headers
+Header files are included using **`#include`** (preprocessor directive).
 
----
+### 1️. System Header Files
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+```
+
+* Written inside `< >`
+* Provided by compiler
+* Stored in system directories
+
+### 2️. User-Defined Header Files
+
+```c
+#include "myfile.h"
+```
+
+* Written inside `" "`
+* Searched in current directory first
+* Created by programmer
+
+
+## Common Standard Header Files
+
+| Header File | Purpose                        |
+| ----------- | ------------------------------ |
+| `stdio.h`   | Input / Output functions       |
+| `stdlib.h`  | Memory allocation, conversions |
+| `string.h`  | String handling functions      |
+| `math.h`    | Mathematical functions         |
+| `ctype.h`   | Character testing              |
+| `time.h`    | Date & time                    |
+| `limits.h`  | Data type limits               |
+| `float.h`   | Floating-point limits          |
+| `stdbool.h` | Boolean type (C99)             |
+| `assert.h`  | Debugging                      |
+
+## What Header Files Contain
+
+Header files may contain:
+
+* Function **prototypes**
+* `#define` macros
+* `typedef` declarations
+* `struct`, `union`, `enum` definitions
+* Global constants (`const`)
+
+📌 **Should NOT contain:**
+
+* Function definitions (except inline/macros)
+* Variable definitions
+
+## Example of User-Defined Header
+
+### `mathutils.h`
+
+```c
+#ifndef MATHUTILS_H
+#define MATHUTILS_H
+
+int add(int a, int b);
+int sub(int a, int b);
+
+#endif
+```
+
+### `mathutils.c`
+
+```c
+#include "mathutils.h"
+
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+### `main.c`
+
+```c
+#include <stdio.h>
+#include "mathutils.h"
+
+int main() {
+    printf("%d", add(2,3));
+    return 0;
+}
+```
+
+## Header Guards
+
+Header guards prevent **multiple inclusion errors**.
+
+### Syntax
+
+```c
+#ifndef FILE_NAME_H
+#define FILE_NAME_H
+
+// declarations
+
+#endif
+```
+
+📌 Prevents:
+
+* Redefinition errors
+* Multiple compilation issues
+
+## Preprocessor Directives Used in Headers
+
+| Directive      | Purpose               |
+| -------------- | --------------------- |
+| `#include`     | Include files         |
+| `#define`      | Macros                |
+| `#ifndef`      | If not defined        |
+| `#ifdef`       | If defined            |
+| `#endif`       | End condition         |
+| `#pragma once` | Alternative to guards |
+
+## `#pragma once`
+
+```c
+#pragma once
+```
+
+* Ensures file included only once
+* Compiler-specific but widely supported
+* Simpler than header guards
+
+## Difference: Header vs Source File
+
+| Header (.h)  | Source (.c)    |
+| ------------ | -------------- |
+| Declarations | Definitions    |
+| Shared       | Compiled       |
+| No main()    | Contains logic |
+
+## Important Exam Points ⭐
+
+* Header files are processed by **preprocessor**
+* They do **not produce object code**
+* Order of inclusion matters
+* Circular inclusion causes errors
+* Header files improve modularity
+
+## Common Mistakes ❌
+
+* Defining variables in headers
+* Missing header guards
+* Including `.c` files
+* Multiple definitions
+* Wrong include path
+
+## One-Line Definition (Exam)
+
+> **Header file** is a file containing **declarations and macros** that are shared between multiple source files in C.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###### Data handling
 # 🎗 Data Handling — **C vs C++**
 
