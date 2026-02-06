@@ -5,7 +5,7 @@
 * [History of C](#history-of-c)
 * [Features of C](#features-of-c)
 * [Basics](#basics)
-* [Header Files](#header-files)
+* [Header Files](#header)
 * [Data Handling](#data-handling)
 * [Flow of Control](#flow-of-control)
 * [Functions](#functions)
