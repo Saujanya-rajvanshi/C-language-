@@ -2,18 +2,18 @@
 
 ### Index - C Programming
 
-* [History of C](#history-of-c)
-* [Features of C](#features-of-c)
-* [Basics](#basics)
-* [Header Files](#header)
-* [Data Handling](#Data-Handling)
-* [Flow of Control](#flow-of-control)
-* [Functions](#functions)
-* [Arrays](https://github.com/Saujanya-rajvanshi/Arrays-)
-* [Pointers](#pointers)
-* [Dynamic Memory Allocation](#dynamic-memory-allocation)
-* [Structures & Unions](#structures-unions)
-* [Object-Oriented Programming (OOP)](https://github.com/Saujanya-rajvanshi/THEORY?tab=readme-ov-file#Oops)
+- [History of C](#history-of-c)
+- [Features of C](#features-of-c)
+- [Basics](#basics)
+- [Header Files](#header)
+- [Data Handling](#Data-Handling)
+- [Flow of Control](#flow-of-control)
+- [Functions](#functions)
+- [Arrays](https://github.com/Saujanya-rajvanshi/Arrays-)
+- [Pointers](#pointers)
+- [Dynamic Memory Allocation](#dynamic-memory-allocation)
+- [Structures & Unions](#structures-unions)
+- [Object-Oriented Programming (OOP)](https://github.com/Saujanya-rajvanshi/THEORY?tab=readme-ov-file#Oops)
 - [Exception Handling](#exception-handling)
 - [File Handling](#file-handling)
 - [Templates](#templates)
@@ -24,6 +24,16 @@
 - [basic maths codes](https://github.com/Saujanya-rajvanshi/basic-maths)
 
 ---
+
+
+
+
+
+
+
+
+
+
 
 ###### history of c
 # 🎗 HISTORY
@@ -71,6 +81,21 @@
 * **Low-level access**: Can manipulate memory using pointers.
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###### basics
 ## 🎗 BASICS 
@@ -916,7 +941,7 @@ typedef unsigned int uint;
 
 
 ###### flow of control
-# 🎗 Flow of Control — **C vs C++**
+# 🎗 FLOW OF CONTROL (C)
 
 ### ✅ Same Flow Control Structures
 
@@ -934,7 +959,6 @@ These are **identical** in C and C++:
 * `return`
 * Ternary operator `?:`
 
----
 
 ### ❌ switch limitations
 
@@ -945,17 +969,15 @@ These are **identical** in C and C++:
 * ❌ No `enum class` (C++ only)
 * ❌ No `string` in switch
 
----
 
 ### ❌ Range-based for loop
 
-* ❌ **Not supported in C**
+* **Not supported in C**
 
 ```cpp
 for (int x : arr)  // C++ only
 ```
 
----
 
 ### ❌ Boolean conditions
 
@@ -967,20 +989,7 @@ for (int x : arr)  // C++ only
 
 ---
 
-# 🔥 Quick Comparison Snapshot
 
-| Feature           | C | C++ |
-| ----------------- | - | --- |
-| Namespaces        | ❌ | ✅   |
-| `::` operator     | ❌ | ✅   |
-| Classes           | ❌ | ✅   |
-| References        | ❌ | ✅   |
-| `string`          | ❌ | ✅   |
-| STL               | ❌ | ✅   |
-| Range-based loop  | ❌ | ✅   |
-| `<bits/stdc++.h>` | ❌ | ✅   |
-
----
 
 
 
