@@ -585,7 +585,7 @@ printf("Value: %d", n);
 
 
 ###### header
-# 🎗 Header Files & Namespaces (C)
+# 🎗 Header Files (C)
 
 Header files are files with extension .h that contain function declarations, macros, constants, and data type definitions.
 
