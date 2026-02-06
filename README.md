@@ -6,7 +6,7 @@
 * [Features of C](#features-of-c)
 * [Basics](#basics)
 * [Header Files](#header)
-* [Data Handling](#data-handling)
+* [Data Handling](#Data-Handling)
 * [Flow of Control](#flow-of-control)
 * [Functions](#functions)
 * [Arrays](https://github.com/Saujanya-rajvanshi/Arrays-)
@@ -836,8 +836,8 @@ Header guards prevent **multiple inclusion errors**.
 
 
 
-###### Data handling
-# 🎗 Data Handling — **C vs C++**
+###### Data Handling
+# 🎗 Data Handling (C)
 
 ### 🔹 Strings
 
@@ -902,6 +902,18 @@ typedef unsigned int uint;
 ```
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###### flow of control
 # 🎗 Flow of Control — **C vs C++**
@@ -969,6 +981,18 @@ for (int x : arr)  // C++ only
 | `<bits/stdc++.h>` | ❌ | ✅   |
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
 ###### functions
 # 🎗 FUNCTION
 ### ✅ SAME in C
@@ -1004,6 +1028,15 @@ void fun(int *x);   // instead of int &x
 > C supports only **call by value** and **call by address (pointer)**.
 
 ---
+
+
+
+
+
+
+
+
+
 
 ###### pointers
 # 🎗 POINTERS
@@ -1043,6 +1076,17 @@ int *p = NULL;   // use NULL, not nullptr
 > C uses **raw pointers only**, no automatic memory management.
 
 ---
+
+
+
+
+
+
+
+
+
+
+
 
 ###### dynamic memory allocation
 # 🎗 DYNAMIC MEMORY ALLOCATIONS 
