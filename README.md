@@ -3,7 +3,7 @@
 ### Index - C Programming
 
 - [History of C](#history-of-c)
-- [Features of C](#features-of-c)
+- [Features of C](#Features)
 - [Basics](#basics)
 - [Header Files](#header)
 - [Data Handling](#Data-Handling)
@@ -60,7 +60,8 @@
 
 ---
 
-## **2. Applications and Features of C** <a name="features-of-c"></a>
+###### Features
+## 🎗 FEATURES
 
 ###### Applications
 * **Operating Systems:** Used in UNIX, Linux, Windows, and macOS for kernels, drivers, and system utilities.
