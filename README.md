@@ -61,7 +61,7 @@
 ---
 
 ###### Features
-## 🎗 FEATURES
+# 🎗 FEATURES
 
 ###### Applications
 * **Operating Systems:** Used in UNIX, Linux, Windows, and macOS for kernels, drivers, and system utilities.
