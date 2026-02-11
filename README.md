@@ -255,7 +255,7 @@ int *p = NULL;
 * No operator overloading
 * Basic arithmetic, logical, bitwise same
 
-## panctuators
+## panctuator
 
 ❌ C++ only
 * `::`
