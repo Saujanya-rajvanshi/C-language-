@@ -262,7 +262,7 @@ int *p = NULL;
 * `...` (limited use in C via stdarg)
 
 ✅ C
-* `; { } ( ) [ ] #`
+* `;  { }  ( )  [ ]  ,  :  .  ->  #  ...`
 
 
 ## Barebones of C program
