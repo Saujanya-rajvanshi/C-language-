@@ -115,6 +115,9 @@
 - [Escape Sequences](#Escape-Sequences)
 - [output & input](#output-and-input)
 
+---
+
+    
 ## character set
 ✅ **NO difference**
 * **Letters:** A–Z, a–z
@@ -125,12 +128,17 @@
 ## Tokens
  Tokens are the **smallest units** of a C++ program.
 * **Keywords:** -> less than c++
+* - [tokens - keywords](#keywords)
 * **Identifiers:** -> same as c++
+* - [tokens - identifier](#identifier)
 * **Constants (literals):** -> 0 , 1 and null
+* - [tokens - literals](#literals)
 * **Operators:** -> same as c++
+* - [tokens - operator](#operator)
 *  **Separators (punctuators):** -> same as c++
+*  - [tokens - panctuator](#panctuator)
 
-### 💎 KEYWORDS
+## keywords
 
 ### ❌ NOT in C (C++ only)
 * bool
@@ -159,12 +167,12 @@
 * **C ≈ 32 keywords**
 * **C++ ≈ 95 keywords (C++20)**
 
-### 💎 IDENTIFIER
+## identifier
 
 ✅ **NO difference**
 Rules are **exactly same** in C and C++.
 
-### 💎 LITERALS
+## literals 
 
 ❌ C++ only
 * Boolean literals → `true`, `false`
@@ -174,7 +182,8 @@ Rules are **exactly same** in C and C++.
 * Uses `0` or `NULL` instead of `nullptr`
 * Boolean handled using `int` (0 or 1)
 
-##### **INTEGER LITERALS**
+##### integer literals
+
 ❌ C++ only
 * **Binary literals** → `0b1010`
 ✅ C
@@ -186,13 +195,13 @@ Rules are **exactly same** in C and C++.
 * IEEE-754 format
 * Precision rules same
 
-##### **CHARACTER LITERALS**
+##### character literals
 ✅ **NO difference**
 * char type
 * ASCII values
 * Escape sequences same
 
-### 💎 STRING
+##### string literals
 
 ❌ C++ only
 * `string` (STL)
@@ -209,7 +218,7 @@ char str[20] = "Hello";
 * Uses `<string.h>` functions: `strlen`, `strcpy`
 
 
-### 💎 BOOLEAN
+##### boolean literals
 
 ❌ C++ only
 * `bool` type
@@ -222,7 +231,7 @@ char str[20] = "Hello";
 int flag = 1; // true
 ```
 
-### 💎 NULL POINTER
+##### null
 
 ❌ C++ only
 * `nullptr`
@@ -234,7 +243,8 @@ int flag = 1; // true
 int *p = NULL;
 ```
 
-### 💎 OPERATORS
+## operator
+
 ❌ C++ only
 * `::` scope resolution
 * `->` with classes
@@ -245,7 +255,8 @@ int *p = NULL;
 * No operator overloading
 * Basic arithmetic, logical, bitwise same
 
-### 💎 PUNCTUATORS
+## panctuators
+
 ❌ C++ only
 * `::`
 * `...` (limited use in C via stdarg)
