@@ -636,6 +636,15 @@ Header files are files with extension .h that contain function declarations, mac
 * Headers usually end with `.h`
 * C headers **do not contain classes**
 
+## boiler plate code 
+```cpp
+#include <stdio.h>
+
+int main(){
+    printf("hello world");
+    return 0;
+}
+```
 ## Why Header Files Are Used
 
 * Separate **declaration** from **definition**
